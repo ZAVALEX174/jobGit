@@ -283,6 +283,7 @@
   </div>
 
   <main>
+    <h1 class="visually-hidden">"Челябинская школа специальной подготовки ДОСААФ РОССИИ"</h1>
     <section class="hero-slider">
       <div class="swiper swiper-hero">
 
@@ -877,7 +878,7 @@
               <li><a class="blue" href="#">заказать звонок</a></li>
               <li>
                 <a href="mailto:nou_rosto@mail.ru">
-                               <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1H4M1 5H3M7.02 2.801L6.42 8.801C6.3922 9.07903 6.42296 9.35981 6.51031 9.62522C6.59766
                             9.89064 6.73966 10.1348 6.92715 10.342C7.11464 10.5492 7.34346 10.7148 7.59886 10.8281C7.85426
                             10.9414 8.13058 11 8.41 11H16.39C16.886 11 17.3642 10.8157 17.732 10.4829C18.0997 10.1501
@@ -965,14 +966,17 @@
       </svg>
     </button>
   </div>
-  <div class="modal">
-    <form action="" class="modal__form">
-      <label for="userName" class="modal__title">Заказ звонка</label>
-      <input id="#userName" type="text" placeholder="Ваше имя" required>
-      <input type="tel" placeholder="Ваш Телефон" required>
-      <textarea type="text-area" required> </textarea>
-      <button class="modal__btn btn">отправить</button>
-    </form>
+  <div class="modal orderCall visually-hidden">
+    <div class="modal__container">
+      <form action="" class="modal__form">
+        <label for="userName" class="modal__title">Заказ звонка</label>
+        <input id="userName" type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Ваш Телефон" required>
+        <textarea type="text-area" required> </textarea>
+        <button type="submit" class="modal__btn-sub btn">отправить</button>
+        <button type="button" class="modal__btn-slose btn"></button>
+      </form>
+    </div>
   </div>
 </body>
 
