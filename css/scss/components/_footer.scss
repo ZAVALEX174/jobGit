@@ -18,9 +18,9 @@
 
     @media #{$laptop} {
       grid-template-areas:
-      'logo map cont'
-      'logo map cont'
-      'f-copy f-copy dev';
+        'logo map cont'
+        'logo map cont'
+        'f-copy f-copy dev';
     }
 
     @media #{$notebook_s} {
@@ -31,9 +31,9 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 150px 1fr;
       grid-template-areas:
-      'logo cont'
-      'map map'
-      'f-copy dev';
+        'logo cont'
+        'map map'
+        'f-copy dev';
     }
 
     @media #{$tablet-mini} {
@@ -44,11 +44,11 @@
       //grid-template-rows: repeat(5, 1fr);
       justify-items: center;
       grid-template-areas:
-      'cont cont'
-      'logo logo'
-      'map map'
-      'soci soci'
-      'f-copy dev';
+        'cont cont'
+        'logo logo'
+        'map map'
+        'soci soci'
+        'f-copy dev';
     }
 
     @media #{$phone} {
@@ -56,12 +56,11 @@
       grid-template-columns: minmax(190px, 460px) 120px;
       grid-template-rows: 100px 175px 220px 50px;
       grid-template-areas:
-      'cont .'
-      'logo .'
-      'map map'
-      'soci soci'
-      'f-copy dev'
-      ;
+        'cont .'
+        'logo .'
+        'map map'
+        'soci soci'
+        'f-copy dev';
     }
   }
 
@@ -171,8 +170,8 @@
       grid-template-rows: 80px 70px;
       row-gap: 18px;
       grid-template-areas:
-      'title-footer'
-      'logo';
+        'title-footer'
+        'logo';
     }
 
     @media #{$phone} {
@@ -198,7 +197,6 @@
       }
 
       img {
-
         @media #{$tablet-mini} {
           display: inline-block;
           width: 67px;
@@ -233,7 +231,6 @@
           @media #{$tablet-mini} {
             font-size: 25px;
           }
-
         }
       }
     }
@@ -317,16 +314,12 @@
 
         @media #{$notebook_s} {
           display: flex;
-
         }
 
         @media #{$tablet-mini} {
           display: flex;
           justify-self: flex-start;
-
         }
-
-
 
         li {
           padding: 0;
@@ -340,9 +333,11 @@
 
           a {
             color: #fff;
+            transition: 0.3s ease-in;
 
             .grey {
               color: #b1b1b1;
+              transition: 0.3s ease-in;
             }
 
             .span-email {
@@ -358,15 +353,38 @@
             }
           }
 
+          a:hover {
+            color: #34c3ff;
+            transition: 0.3s ease-in;
+
+            .grey {
+              color: #fff;
+              transition: 0.3s ease-in;
+            }
+          }
+
           .blue {
             font-family: $font-family-base;
             font-weight: 700;
             font-size: 18px;
             color: #56a2e9;
+            transition: 0.3s ease-in;
 
             @media #{$tablet-mini} {
               display: none;
             }
+          }
+
+          .blue:hover {
+            color: #fff;
+            transition: 0.3s ease-in;
+          }
+        }
+
+        a:hover {
+          span {
+            color: #34c3ff;
+            transition: 0.3s ease-in;
           }
         }
 
@@ -381,6 +399,7 @@
           padding: 0 21px;
           box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.3);
           background: rgba(19, 19, 19, 0.3);
+          transition: 0.3s ease-in;
 
           @media #{$tablet-mini} {
             position: absolute;
@@ -395,14 +414,20 @@
             max-width: 357px;
             bottom: 15%;
           }
+
+          svg {
+            color: #7d889a;
+          }
         }
 
         .btn__social_footer:hover {
           box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.8);
           background: rgba(19, 19, 19, 0.8);
+          transition: 0.3s ease-in;
 
           svg {
             color: #34c3ff;
+            transition: 0.3s ease-in;
           }
         }
 
@@ -451,11 +476,15 @@
       color: #40464e;
       text-transform: uppercase;
 
-      .copy{
+      .copy {
         font-weight: 400;
         font-size: 16px;
         color: #40464e;
         text-transform: capitalize;
+      }
+      .copy:hover {
+        color: #34c3ff;
+        transition: 0.3s ease-in;
       }
     }
   }
@@ -479,7 +508,6 @@
     @media #{$phone} {
       margin-left: 14px;
     }
-
   }
 }
 
