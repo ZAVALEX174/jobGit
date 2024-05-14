@@ -1,0 +1,184 @@
+.servises {
+  padding: 110px 0 60px 0;
+  position: relative;
+
+  .servises__container {
+    width: 100%;
+    position: relative;
+
+    .servises__title {
+      margin-bottom: 68px;
+    }
+
+    .swiper-button-next {
+      position: absolute;
+      width: 55px;
+      top: 61%;
+      right: 2%;
+      z-index: 99999999;
+
+      @media #{$desktop} {
+        right: 1%;
+      }
+
+      @media #{$desktop} {
+        right: 3%;
+      }
+
+      @media #{$laptop_s} {
+        display: none;
+      }
+    }
+
+    .swiper-button-next::after{
+      display: none;
+    }
+
+    .swiper-button-prev {
+      position: absolute;
+      width: 55px;
+      top: 61%;
+      left: 2%;
+      z-index: 99999999;
+
+      @media #{$desktop} {
+        left: 1%;
+      }
+
+      @media #{$desktop} {
+        left: 3%;
+      }
+
+      @media #{$laptop_s} {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev::after{
+      display: none;
+    }
+
+    .servises__wrapper {
+      margin: 0 auto;
+      max-width: 1500px;
+      margin-bottom: 48px;
+
+      @media #{$desktop} {
+        max-width: 1160px;
+      }
+
+      @media #{$notebook} {
+        max-width: 800px;
+      }
+
+      .swiper {
+        display: block;
+
+        @media #{$phone} {
+          display: none;
+        }
+      }
+
+      .swiper-servises {
+        width: 100%;
+        height: 380px;
+        position: relative;
+
+        .swiper-wrapper {
+
+          .swiper-slide {
+            cursor: pointer;
+
+            img {
+              width: 100%;
+              height: 370px;
+              object-fit: contain;
+              object-position: center;
+              transition: transform 0.9s linear;
+              position: relative;
+            }
+
+            img:hover {
+              transform: translateY(-20px);
+              transition: 0.9s linear;
+            }
+          }
+
+          .swiper-slide::after {
+            position: absolute;
+            z-index: 200000000;
+            content: '';
+            bottom: 10px;
+            left: -11px;
+            right: -8px;
+            height: 50px;
+            background-image: url("../images/consultation/ten.png");
+          }
+        }
+      }
+    }
+
+      .servises__noslider {
+        width: 100%;
+        display: none;
+
+        @media #{$phone} {
+          display: block;
+        }
+
+        .servises__noslider-list {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .servises__noslider-item {
+            background: transparent;
+
+            img {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+    .servises__btn {
+     display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn__servises {
+        display: inline-flex;
+        background: transparent;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        color: #244f77;
+        transition: 0.3s ease-in;
+        text-align: center;
+
+        svg {
+          margin-left: 7px;
+        }
+      }
+
+      .btn__servises:hover {
+        color: #56A2E9;
+        transition: 0.3s ease-in;
+
+        svg {
+          margin-left: 7px;
+          color: #244f77;
+          transform: rotate(360deg);
+          transition: 0.6s ease-in;
+        }
+      }
+    }
+  }
+}
