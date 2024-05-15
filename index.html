@@ -966,15 +966,18 @@
       </svg>
     </button>
   </div>
-  <div class="modal orderCall visually-hidden">
+  <div class="modal modal__orderCall modal_opened">
     <div class="modal__container">
       <form action="" class="modal__form">
         <label for="userName" class="modal__title">Заказ звонка</label>
         <input id="userName" type="text" placeholder="Ваше имя" required>
         <input type="tel" placeholder="Ваш Телефон" required>
-        <textarea type="text-area" required> </textarea>
+        <textarea type="text-area" placeholder="Наши администраторы ответят 
+        на любой интересующий Вас вопрос по услуге" required> </textarea>
         <button type="submit" class="modal__btn-sub btn">отправить</button>
         <button type="button" class="modal__btn-slose btn"></button>
+        <span>Нажимая на кнопку <em>«Отправить»</em>, вы даете согласие <a href="#">на обработку
+            своихперсональных данных</a></span>
       </form>
     </div>
   </div>
