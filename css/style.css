@@ -4937,6 +4937,15 @@ main {
   margin-bottom: 0px;
   margin-top: 106px;
 }
+@media screen and (max-width: 500px) {
+  .page-404 .h1__error {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50%;
+    color: #364958;
+    margin-top: 82px;
+  }
+}
 .page-404 .error__content {
   padding: 60px 0 0;
   position: relative;
@@ -4959,6 +4968,11 @@ main {
   background: linear-gradient(223deg, #56a2e9 0%, #244f77 58.65%);
   background-clip: text;
 }
+@media screen and (max-width: 767px) {
+  .page-404 .error__content h2 {
+    font-size: 300px;
+  }
+}
 .page-404 .error__content h2::after {
   position: absolute;
   content: "";
@@ -4968,6 +4982,12 @@ main {
   height: 227px;
   width: 100%;
   background: url("../images/page404/naushi1.svg") no-repeat center/contain;
+}
+@media screen and (max-width: 767px) {
+  .page-404 .error__content h2::after {
+    right: 37px;
+    top: 3px;
+  }
 }
 .page-404 .error__content h2:before {
   position: absolute;
@@ -4980,6 +5000,25 @@ main {
   background: url("../images/page404/bg404page.svg") no-repeat center/contain;
   pointer-events: none;
 }
+@media screen and (max-width: 999px) {
+  .page-404 .error__content h2:before {
+    width: 694px;
+    top: -78px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-404 .error__content h2:before {
+    width: 485px;
+    top: -163px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .page-404 .error__content h2:before {
+    width: 360px;
+    height: 323px;
+    top: -48px;
+  }
+}
 .page-404 .error__content p {
   padding: 0;
   margin: 0;
@@ -4991,8 +5030,24 @@ main {
   margin-bottom: 18px;
   margin-top: -33px;
 }
+@media screen and (max-width: 500px) {
+  .page-404 .error__content p {
+    margin-bottom: 21px;
+    margin-top: -40px;
+  }
+}
 .page-404 .error__content nav {
   margin-bottom: 320px;
+}
+@media screen and (max-width: 767px) {
+  .page-404 .error__content nav {
+    margin-bottom: 200px;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  .page-404 .error__content nav {
+    margin-bottom: 211px;
+  }
 }
 .page-404 .error__content nav ul {
   display: flex;
@@ -5001,6 +5056,11 @@ main {
 .page-404 .error__content nav ul li {
   border-radius: 10px;
   margin-right: 21px;
+}
+@media screen and (max-width: 500px) {
+  .page-404 .error__content nav ul li {
+    margin-right: 13px;
+  }
 }
 .page-404 .error__content nav ul li a {
   position: relative;
@@ -5014,6 +5074,13 @@ main {
   padding: 0;
   width: 200px;
   z-index: 5;
+}
+@media screen and (max-width: 500px) {
+  .page-404 .error__content nav ul li a {
+    width: 165px;
+    height: 50px;
+    align-items: center;
+  }
 }
 .page-404 .error__content nav ul li:last-of-type:hover a::after {
   position: absolute;
@@ -5048,6 +5115,12 @@ main {
   height: 14px;
   background: url("../images/btn-arr-right-white.svg") no-repeat;
   z-index: 10;
+}
+@media screen and (max-width: 500px) {
+  .page-404 .error__content nav ul li:last-of-type a::after {
+    top: 19px;
+    right: 6px;
+  }
 }
 .page-404 .error__content nav ul li:first-of-type a::before {
   position: absolute;

@@ -9,6 +9,14 @@
     line-height: 33%;
     margin-bottom: 0px;
     margin-top: 106px;
+
+    @media #{$phone} {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 50%;
+      color: #364958;
+      margin-top: 82px;
+    }
   }
 
   .error__content {
@@ -34,6 +42,10 @@
       background-clip: text;
       //opacity: 0.1;
       //-webkit-background-clip: text;
+
+      @media #{$tablet-mini} {
+        font-size: 300px;
+      }
     }
 
     h2::after {
@@ -46,6 +58,10 @@
       width: 100%;
       background: url("../images/page404/naushi1.svg") no-repeat center/contain;
 
+      @media #{$tablet-mini} {
+        right: 37px;
+        top: 3px;
+      }
     }
 
     h2:before {
@@ -58,6 +74,22 @@
       height: 713px;
       background: url("../images/page404/bg404page.svg") no-repeat center/contain;
       pointer-events: none;
+
+      @media #{$tablet} {
+        width: 694px;
+        top: -78px;
+      }
+
+      @media #{$tablet-mini} {
+        width: 485px;
+        top: -163px;
+      }
+
+      @media #{$phone} {
+        width: 360px;
+        height: 323px;
+        top: -48px;
+      }
     }
 
   p {
@@ -70,10 +102,23 @@
     color: #000;
     margin-bottom: 18px;
     margin-top: -33px;
+
+    @media #{$phone} {
+      margin-bottom: 21px;
+      margin-top: -40px;
+    }
     }
 
 nav {
   margin-bottom: 320px;
+
+  @media #{$tablet-mini} {
+    margin-bottom: 200px;
+
+    @media #{$phone} {
+      margin-bottom: 211px;
+    }
+  }
 
   ul {
     display: flex;
@@ -82,6 +127,10 @@ nav {
     li {
       border-radius: 10px;
       margin-right: 21px;
+
+      @media #{$phone} {
+        margin-right: 13px;
+      }
 
       a {
         position: relative;
@@ -95,6 +144,12 @@ nav {
         padding: 0;
         width: 200px;
         z-index: 5;
+
+        @media #{$phone} {
+          width: 165px;
+          height: 50px;
+          align-items: center;
+        }
       }
     }
 
@@ -139,6 +194,11 @@ nav {
         height: 14px;
         background: url("../images/btn-arr-right-white.svg") no-repeat;
         z-index: 10;
+
+        @media #{$phone} {
+          top: 19px;
+          right: 6px;
+        }
       }
     }
 
