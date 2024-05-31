@@ -9,25 +9,16 @@
   <title>ЧЕЛЯБИНСКАЯ ШКОЛА СПЕЦИАЛЬНОЙ ПОДГОТОВКИ ДОСААФ РОССИИ</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/swiper-bundle.css" />
+  <link rel="stylesheet" href="script/fancybox/fancybox.css">
   <link rel="stylesheet" href="css/style.css" />
-
-  <script src="script/burger.js" defer></script>
-  <script src="script/swiper-bundle.js" defer></script>
-  <script src="script/hero-slider.js" defer></script>
-  <script src="script/services-slider.js" defer></script>
-  <script src="script/open-submenu.js" defer></script>
-  <script src="script/button-go-up.js" defer></script>
-
-  <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>-->
-  <!--    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header__all-page">
     <div class="container all-width">
       <div class="header__container">
         <div class="header__logo">
-          <a href="/">
+          <a href="#">
             <img class="header__logo_img" src="./images/logo.svg"
               alt="Челябинская школа специальной подготовки ДОСААФ РОССИИ" />
             <div class="header__logo_title">
@@ -53,12 +44,12 @@
                             2.10936 18.6603 1.86519 18.4729 1.65801C18.2854 1.45083 18.0565 1.28524 17.8011 1.17191C17.5457
                             1.05857 17.2694 1.00001 16.99 1H9.01C8.51403 1.00002 8.03576 1.18432 7.66803 1.51712C7.3003
                             1.84993 7.06935 2.30749 7.02
-                            2.801Z" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            2.801Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                   <path d="M7.80005 1.5L10.782 4.78C11.047 5.07155 11.3669 5.30804 11.7233 5.47598C12.0797 5.64392
                             12.4657 5.74001 12.8592 5.75877C13.2528 5.77753 13.6461 5.71858 14.0169 5.5853C14.3876 5.45203
                             14.7285 5.24702 15.02
-                            4.982L18.3 2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            4.982L18.3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
                 <span>nou_rosto<i>@</i>mail.ru</span></a>
@@ -73,15 +64,16 @@
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979
                             9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21
-                            13.9779V9.69195Z" fill="#56A2E9" />
-                  <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            13.9779V9.69195Z" fill="currentColor" />
+                  <path d="M4 1H1M4 5H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-                <span>8 (351)</span> 277-98-50
+                <span>8 (351)&nbsp;</span>277-98-50
               </a>
             </li>
             <li class="contacts__item contacts__item_zacaz-call">
-              <a class="contacts__link contacts__link-call" href="#">заказать звонок</a>
+              <a class="contacts__link contacts__link-call" href="#" data-fancybox=""
+                data-src="#dialog-content">заказать звонок</a>
             </li>
             <li class="contacts__item contacts__item_social">
               <a class="contacts__link contacts__link_social" href="https://vk.com"><svg class="icon icon-social"
@@ -115,28 +107,28 @@
           <nav class="header__navigation">
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link link-hov" href="#">О нас</a>
+                <a class="menu__link link-hov" href="about.html">О нас</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link link-hov submenu" href="#">Услуги</a>
-                <ul class="submenu__list visually-hidden">
-                  <li class="submenu__item"><a href="#" class="submenu__link">Обучение охранников</a></li>
-                  <li class="submenu__item"><a href="#" class="submenu__link">Аренда тира</a></li>
-                  <li class="submenu__item"><a href="#" class="submenu__link active">Лицензия на оружие</a></li>
-                  <li class="submenu__item"><a href="#" class="submenu__link">Периодическая проверка</a></li>
+              <li class="menu__item menu__item-hover">
+                <a class="menu__link link-hov submenu" href="services.html">Услуги</a>
+                <ul class="submenu__list">
+                   <li class="submenu__item"><a href="service.html" class="submenu__link">Обучение охранников</a></li>
+                   <li class="submenu__item"><a href="#" class="submenu__link">Аренда тира</a></li>
+                   <li class="submenu__item"><a href="#" class="submenu__link">Лицензия на оружие</a></li>
+                   <li class="submenu__item"><a href="#" class="submenu__link">Периодическая проверка</a></li>
                 </ul>
               </li>
               <li class="menu__item ">
                 <a class="menu__link link-hov" href="#">Лицензии и разрешения</a>
               </li>
               <li class="menu__item">
-                <a class="grid__link2 menu__link link-hov" href="#">Наши клиенты</a>
+                <a class="grid__link2 menu__link link-hov" href="customers.html">Наши клиенты</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link link-hov accent" href="#">Оплатить обучение</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link link-hov" href="#">Контакты</a>
+                <a class="menu__link link-hov" href="contacts.html">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -152,25 +144,25 @@
     </div>
   </header>
   <div class="burger__menu">
-    <div class="container">
+<!--    <div class="container">-->
       <div class="burger__menu-container">
         <nav class="burger__nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Услуги</a>
+              <a class="nav__link" href="services.html">Услуги</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Лицензии и разрешения</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Наши клиенты</a>
+              <a class="nav__link" href="customers.html">Наши клиенты</a>
             </li>
             <li class="nav__item">
               <a class="nav__link accent" href="#">Оплатить обучение</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link" href="contacts.html">Контакты</a>
             </li>
             <li class="nav__item">
               <a class="nav__link intelligence" href="#">Сведения об образовательной организации</a>
@@ -185,11 +177,11 @@
                   fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979 9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21 13.9779V9.69195Z"
-                    fill="#56A2E9" />
-                  <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                    fill="currentColor" />
+                  <path d="M4 1H1M4 5H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-                <span>8 (351)</span> 277-98-50</a>
+                <span>8 (351)&nbsp;</span> 277-98-50</a>
             </li>
             <li class="contact__item">
               <a href="mailto:nou_rosto@mail.ru" class="contact__line email"><svg class="icon icon-email" width="20"
@@ -216,26 +208,26 @@
             <address>
               <span>Адрес школы:</span>
               <a href="#">
-                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097
-                           14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903
-                           14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5" />
-                  <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543
-                           5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5" />
-                </svg>
+<!--                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097-->
+<!--                           14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903-->
+<!--                           14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5" />-->
+<!--                  <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543-->
+<!--                           5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5" />-->
+<!--                </svg>-->
                 <p>г. Челябинск ул. Евтеева д.6 цокольный этаж</p>
               </a>
             </address>
             <address>
               <span>Адрес тира:</span>
               <a href="#">
-                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097
-                           14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903
-                           14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5" />
-                  <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543
-                           5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5" />
-                </svg>
+<!--                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                  <path d="M1 6.7C1 3.552 3.686 1 7 1C10.314 1 13 3.552 13 6.7C13 9.824 11.085 13.469 8.097-->
+<!--                           14.772C7.7508 14.9223 7.37741 14.9998 7 14.9998C6.62259 14.9998 6.2492 14.9223 5.903-->
+<!--                           14.772C2.915 13.47 1 9.824 1 6.7Z" stroke="#56A2E9" stroke-width="1.5" />-->
+<!--                  <path d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543-->
+<!--                           5 7C5 8.10457 5.89543 9 7 9Z" stroke="#56A2E9" stroke-width="1.5" />-->
+<!--                </svg>-->
                 <p>г. Челябинск ул. Плеханова д.1А</p>
               </a>
             </address>
@@ -274,21 +266,19 @@
               <circle cx="26.5" cy="26.5" r="26.5" fill="black" fill-opacity="0.5" />
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M34.5563 33.5564C34.9469 33.1658 34.9469 32.5327 34.5563 32.1421L28.7026 26.2884L34.7484 20.2427C35.1389 19.8521 35.1389 19.219 34.7484 18.8284C34.3578 18.4379 33.7247 18.4379 33.3342 18.8284L27.2884 24.8742L21.1213 18.7071C20.7308 18.3166 20.0976 18.3166 19.7071 18.7071C19.3166 19.0976 19.3166 19.7308 19.7071 20.1213L25.8742 26.2884L19.8991 32.2635C19.5086 32.654 19.5086 33.2872 19.8991 33.6777C20.2896 34.0682 20.9228 34.0682 21.3133 33.6777L27.2884 27.7026L33.1421 33.5564C33.5327 33.9469 34.1658 33.9469 34.5563 33.5564Z"
-                fill="#6F7279" />
+                fill="currentColor" />
             </svg>
           </button>
         </div>
       </div>
-    </div>
+<!--    </div>-->
   </div>
 
   <main>
     <h1 class="visually-hidden">"Челябинская школа специальной подготовки ДОСААФ РОССИИ"</h1>
     <section class="hero-slider">
       <div class="swiper swiper-hero">
-
         <div class="swiper-wrapper">
-
           <div class="swiper-slide" style="
                 background: url(images/bg-hero.png) no-repeat center/cover;
                 height: 606px;
@@ -337,7 +327,7 @@
             <div class="hero-slider__container">
               <div class="container">
                 <div class="hero-slider__card">
-                  <h2>Лицензия на оружие</h2>
+                  <h2>Лицензия&nbsp;на оружие</h2>
                   <p>
                     С опытными преподавателями и эффективными методиками вы
                     станете настоящим профессионалом в охранной деятельности.
@@ -390,7 +380,7 @@
         </div>
         <div class="swiper-button-prev btn__slider_prev">
           <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="27.5" cy="27.5" r="27" transform="matrix(-1 0 0 1 55 0)" stroke="#3C4350" />
+            <circle cx="27.5" cy="27.5" r="27" transform="matrix(-1 0 0 1 55 0)" stroke="currentColor" />
             <path
               d="M26.29 32.71L21.29 27.71C21.199 27.6149 21.1276 27.5028 21.08 27.38C20.98 27.1365
                           20.98 26.8635 21.08 26.62C21.1276 26.4973 21.199 26.3851 21.29 26.29L26.29 21.29C26.3833
@@ -402,7 +392,7 @@
                           31.868 28.0058 32C28.0058 32.132 27.9797 32.2627 27.9289 32.3846C27.8781 32.5064 27.8037 32.617
                           27.71 32.71C27.6171 32.8037 27.5065 32.8781 27.3846 32.9289C27.2627 32.9797 27.132 33.0058 27
                           33.0058C26.868 33.0058 26.7373 32.9797 26.6154 32.9289C26.4936 32.8781 26.383 32.8037 26.29 32.71Z"
-              fill="#A8B1C0" />
+              fill="currentColor" />
           </svg>
         </div>
         <div class="swiper-button-next btn__slider_next">
@@ -426,6 +416,10 @@
       </div>
     </section>
 
+    <div class="sticky-box">
+        <div class="sticky"></div>
+    </div>
+
     <section class="servises">
       <div class="servises__container">
         <!-- If we need navigation buttons -->
@@ -435,7 +429,7 @@
               stroke-width="3" />
             <path
               d="M26.29 32.7099L21.29 27.7099C21.199 27.6148 21.1276 27.5027 21.08 27.3799C20.98 27.1365 20.98 26.8634 21.08 26.6199C21.1276 26.4972 21.199 26.385 21.29 26.2899L26.29 21.2899C26.3833 21.1967 26.4939 21.1227 26.6158 21.0723C26.7376 21.0218 26.8682 20.9958 27 20.9958C27.2663 20.9958 27.5217 21.1016 27.71 21.2899C27.8983 21.4782 28.0041 21.7336 28.0041 21.9999C28.0041 22.2662 27.8983 22.5216 27.71 22.7099L24.41 25.9999L32 25.9999C32.2652 25.9999 32.5196 26.1053 32.7071 26.2928C32.8947 26.4804 33 26.7347 33 26.9999C33 27.2652 32.8947 27.5195 32.7071 27.707C32.5196 27.8946 32.2652 27.9999 32 27.9999L24.41 27.9999L27.71 31.2899C27.8037 31.3829 27.8781 31.4935 27.9289 31.6154C27.9797 31.7372 28.0058 31.8679 28.0058 31.9999C28.0058 32.132 27.9797 32.2627 27.9289 32.3845C27.8781 32.5064 27.8037 32.617 27.71 32.7099C27.6171 32.8037 27.5065 32.8781 27.3846 32.9288C27.2627 32.9796 27.132 33.0057 27 33.0057C26.868 33.0057 26.7373 32.9796 26.6154 32.9288C26.4936 32.8781 26.383 32.8037 26.29 32.7099Z"
-              fill="#A8B1C0" />
+              fill="currentColor" />
             <defs>
               <linearGradient id="paint0_linear_400_408" x1="1.5" y1="29" x2="55" y2="29.5"
                 gradientUnits="userSpaceOnUse">
@@ -450,7 +444,7 @@
             <circle cx="27.5" cy="27.5" r="26" stroke="url(#paint0_linear_400_411)" stroke-width="3" />
             <path
               d="M28.71 32.7099L33.71 27.7099C33.801 27.6148 33.8724 27.5027 33.92 27.3799C34.02 27.1365 34.02 26.8634 33.92 26.6199C33.8724 26.4972 33.801 26.385 33.71 26.2899L28.71 21.2899C28.6167 21.1967 28.5061 21.1227 28.3842 21.0723C28.2624 21.0218 28.1318 20.9958 28 20.9958C27.7337 20.9958 27.4783 21.1016 27.29 21.2899C27.1017 21.4782 26.9959 21.7336 26.9959 21.9999C26.9959 22.2662 27.1017 22.5216 27.29 22.7099L30.59 25.9999L23 25.9999C22.7348 25.9999 22.4804 26.1053 22.2929 26.2928C22.1053 26.4804 22 26.7347 22 26.9999C22 27.2652 22.1053 27.5195 22.2929 27.707C22.4804 27.8946 22.7348 27.9999 23 27.9999L30.59 27.9999L27.29 31.2899C27.1963 31.3829 27.1219 31.4935 27.0711 31.6154C27.0203 31.7372 26.9942 31.8679 26.9942 31.9999C26.9942 32.132 27.0203 32.2627 27.0711 32.3845C27.1219 32.5064 27.1963 32.617 27.29 32.7099C27.3829 32.8037 27.4935 32.8781 27.6154 32.9288C27.7373 32.9796 27.868 33.0057 28 33.0057C28.132 33.0057 28.2627 32.9796 28.3846 32.9288C28.5064 32.8781 28.617 32.8037 28.71 32.7099Z"
-              fill="#244F77" />
+              fill="currentColor" />
             <defs>
               <linearGradient id="paint0_linear_400_411" x1="1.5" y1="29" x2="55" y2="29.5"
                 gradientUnits="userSpaceOnUse">
@@ -462,48 +456,50 @@
         </div>
         <div class="container">
           <h2 class="title servises__title">Услуги</h2>
-          <div class="servises__wrapper">
-            <div class="swiper swiper-servises">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/11.png" alt="" />
+
+          <div class="swiper swiper-servises">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="slide-box">
+                  <img src="./images/slider-servises/01.png" alt="Обачение охранников" />
+                  <p>Обучение охранников</p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/22.png" alt="" />
+                <div class="blur"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-box">
+                  <img src="./images/slider-servises/02.png" alt="Лицензия на оружие" />
+                  <p>Лицензия<br> на оружие</p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/33.png" alt="" />
+                <div class="blur"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-box">
+                  <img src="./images/slider-servises/03.png" alt="Периодическая проверка" />
+                  <p>Периодическая проверка</p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/44.png" alt="" />
+                <div class="blur"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-box">
+                  <img src="./images/slider-servises/04.png" alt="Аренда тира" />
+                  <p>Аренда тира</p>
                 </div>
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/11.png" alt="" />
+                <div class="blur"></div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="slide-box">
+                  <img src="./images/slider-servises/01.png" alt="Обачение охранников" />
+                  <p>Обучение охранников</p>
                 </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/22.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/33.png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/slider-servises/44.png" alt="" />
-                </div>
+                <div class="blur"></div>
               </div>
             </div>
           </div>
 
-          <div class="servises__noslider">
-            <ul class="servises__noslider-list">
-              <li class="servises__noslider-item"><img src="./images/1.png" alt="Услуги ДОСААФ"></li>
-              <li class="servises__noslider-item"><img src="./images/2.png" alt="Услуги ДОСААФ"></li>
-              <li class="servises__noslider-item"><img src="./images/3.png" alt="Услуги ДОСААФ"></li>
-              <li class="servises__noslider-item"><img src="./images/4.png" alt="Услуги ДОСААФ"></li>
-            </ul>
-          </div>
           <div class="servises__btn">
             <a href="#" class="btn btn__servises">все услуги
               <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,9 +532,78 @@
                         5.29957 3.38743 5.38838 3.48002C5.47682 3.57299 5.58186 3.64675 5.69747 3.69707C5.81308 3.7474
                         5.93701 3.7733 6.06216 3.7733C6.18731 3.7733 6.31124 3.7474 6.42685 3.69708C6.54246 3.64675
                         6.64749 3.57299 6.73594 3.48002C7.76161 2.40102 8.64634 2.00002 10.0006 2.00002Z"
-                  fill="#56A2E9" />
+                  fill="currentColor" />
               </svg>
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services none">
+      <div class="services__container container">
+        <h2 class="title services__title">Услуги2</h2>
+
+        <div class="services-btn-prev swiper-button-prev">
+          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27.5" cy="27.5" r="26" transform="matrix(-1 0 0 1 55 0)" stroke="url(#paint0_linear_400_408)"
+              stroke-width="3" />
+            <path
+              d="M26.29 32.7099L21.29 27.7099C21.199 27.6148 21.1276 27.5027 21.08 27.3799C20.98 27.1365 20.98 26.8634 21.08 26.6199C21.1276 26.4972 21.199 26.385 21.29 26.2899L26.29 21.2899C26.3833 21.1967 26.4939 21.1227 26.6158 21.0723C26.7376 21.0218 26.8682 20.9958 27 20.9958C27.2663 20.9958 27.5217 21.1016 27.71 21.2899C27.8983 21.4782 28.0041 21.7336 28.0041 21.9999C28.0041 22.2662 27.8983 22.5216 27.71 22.7099L24.41 25.9999L32 25.9999C32.2652 25.9999 32.5196 26.1053 32.7071 26.2928C32.8947 26.4804 33 26.7347 33 26.9999C33 27.2652 32.8947 27.5195 32.7071 27.707C32.5196 27.8946 32.2652 27.9999 32 27.9999L24.41 27.9999L27.71 31.2899C27.8037 31.3829 27.8781 31.4935 27.9289 31.6154C27.9797 31.7372 28.0058 31.8679 28.0058 31.9999C28.0058 32.132 27.9797 32.2627 27.9289 32.3845C27.8781 32.5064 27.8037 32.617 27.71 32.7099C27.6171 32.8037 27.5065 32.8781 27.3846 32.9288C27.2627 32.9796 27.132 33.0057 27 33.0057C26.868 33.0057 26.7373 32.9796 26.6154 32.9288C26.4936 32.8781 26.383 32.8037 26.29 32.7099Z"
+              fill="#A8B1C0" />
+            <defs>
+              <linearGradient id="paint0_linear_400_408" x1="1.5" y1="29" x2="55" y2="29.5"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D5DDEB" stop-opacity="0" />
+                <stop offset="1" stop-color="#D5DDEA" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="services-btn-next swiper-button-next">
+          <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="27.5" cy="27.5" r="26" stroke="url(#paint0_linear_400_411)" stroke-width="3" />
+            <path
+              d="M28.71 32.7099L33.71 27.7099C33.801 27.6148 33.8724 27.5027 33.92 27.3799C34.02 27.1365 34.02 26.8634 33.92 26.6199C33.8724 26.4972 33.801 26.385 33.71 26.2899L28.71 21.2899C28.6167 21.1967 28.5061 21.1227 28.3842 21.0723C28.2624 21.0218 28.1318 20.9958 28 20.9958C27.7337 20.9958 27.4783 21.1016 27.29 21.2899C27.1017 21.4782 26.9959 21.7336 26.9959 21.9999C26.9959 22.2662 27.1017 22.5216 27.29 22.7099L30.59 25.9999L23 25.9999C22.7348 25.9999 22.4804 26.1053 22.2929 26.2928C22.1053 26.4804 22 26.7347 22 26.9999C22 27.2652 22.1053 27.5195 22.2929 27.707C22.4804 27.8946 22.7348 27.9999 23 27.9999L30.59 27.9999L27.29 31.2899C27.1963 31.3829 27.1219 31.4935 27.0711 31.6154C27.0203 31.7372 26.9942 31.8679 26.9942 31.9999C26.9942 32.132 27.0203 32.2627 27.0711 32.3845C27.1219 32.5064 27.1963 32.617 27.29 32.7099C27.3829 32.8037 27.4935 32.8781 27.6154 32.9288C27.7373 32.9796 27.868 33.0057 28 33.0057C28.132 33.0057 28.2627 32.9796 28.3846 32.9288C28.5064 32.8781 28.617 32.8037 28.71 32.7099Z"
+              fill="#244F77" />
+            <defs>
+              <linearGradient id="paint0_linear_400_411" x1="1.5" y1="29" x2="55" y2="29.5"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#D5DDEB" stop-opacity="0" />
+                <stop offset="1" stop-color="#D5DDEA" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="swiper services__swiper">
+
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper services__swiper-wrapper">
+            <!-- Slides -->
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/11.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/22.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/33.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/44.png" alt="" />
+            </div>
+            <!-- Slides -->
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/11.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/22.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/33.png" alt="" />
+            </div>
+            <div class="services__swiper-slide swiper-slide">
+              <img src="./images/slider-servises/44.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -546,10 +611,14 @@
 
     <section class="about">
       <!-- <div class="container"> -->
+      <h2 class="about__title title">О нас</h2>
+      <div class="about__img-mobile">
+        <img src="./images/pixel/fl.png" alt="Картнка с флагами ДОСААФ">
+      </div>
       <div class="about__container container">
-        <h2 class="about__title title">О нас</h2>
+
         <div class="about__wrapper">
-          <article>
+          <div>
             <h3>Многолетний опыт</h3>
             <p>
               организации ДОСААФ России осуществляют обучение с 1927 года!
@@ -558,8 +627,8 @@
               высококвалифицированных преподавателей и инструкторов. Вы в
               надёжных руках!
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Собственный тир</h3>
             <p>
               мы не арендуем помещения тира для проведения стрельб у других
@@ -568,8 +637,8 @@
               (согласованные с Управлением Росгвардии) - проводить
               практические стрельбы и экзамены.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Гарантия соответствует законодательству</h3>
             <p>
               У нас всё по закону! Наша школа имеет Лицензию на
@@ -582,8 +651,8 @@
               необходимые разрешения Управления Росгвардии по Челябинской
               области.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Близкость к вам</h3>
             <p>
               здание школы и тира находятся в центральной части города
@@ -591,8 +660,8 @@
               транспортная доступность. Добраться до нас удобно с любого
               района города!
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Качество и безопасность</h3>
             <p>
               у нас есть все самые необходимые для обучения виды оружия,
@@ -600,8 +669,8 @@
               системами вентиляции и звукоизоляции, что делает занятия
               стрельбой максимально комфортными и безопасными для здоровья.
             </p>
-          </article>
-          <article>
+          </div>
+          <div>
             <h3>Помощь в трудоустройстве</h3>
             <p>
               нашими партнерами являются крупные федеральные компании и
@@ -610,23 +679,8 @@
               обучения у вас будет возможность быстро трудоустроиться по
               профессии
             </p>
-          </article>
-          <a class="about__btn btn">подробнее<svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.70998 11.7141L11.71 6.71409C11.801 6.61899 11.8724 6.50684 11.92 6.38409C12.02 6.14063
-                          12.02 5.86755 11.92 5.62409C11.8724 5.50134 11.801 5.3892 11.71 5.29409L6.70998 0.294091C6.61674
-                          0.200853 6.50605 0.126892 6.38423 0.076432C6.26241 0.0259717 6.13184 -2.56287e-07 5.99998
-                          -2.6205e-07C5.73368 -2.73691e-07 5.47828 0.105788 5.28998 0.294091C5.10168 0.482395 4.99589 0.73779
-                          4.99589 1.00409C4.99589 1.27039 5.10168 1.52579 5.28998 1.71409L8.58998 5.00409L0.999982 5.00409C0.734765
-                          5.00409 0.48041 5.10945 0.292874 5.29698C0.105338 5.48452 -1.83707e-05 5.73887 -1.83823e-05
-                          6.00409C-1.83939e-05 6.26931 0.105338 6.52366 0.292874 6.7112C0.48041 6.89873 0.734765 7.00409
-                          0.999982 7.00409L8.58998 7.00409L5.28998 10.2941C5.19625 10.3871 5.12186 10.4977 5.07109 10.6195C5.02032
-                          10.7414 4.99418 10.8721 4.99418 11.0041C4.99418 11.1361 5.02032 11.2668 5.07109 11.3887C5.12186 11.5105
-                          5.19625 11.6211 5.28998 11.7141C5.38294 11.8078 5.49355 11.8822 5.6154 11.933C5.73726 11.9838 5.86797
-                          12.0099 5.99998 12.0099C6.13199 12.0099 6.2627 11.9838 6.38456 11.933C6.50642 11.8822 6.61702 11.8078
-                          6.70998 11.7141Z" fill="currentColor" />
-            </svg>
-          </a>
+          </div>
+          <a class="about__btn btn">подробнее</a>
         </div>
       </div>
       <!-- </div> -->
@@ -639,37 +693,53 @@
           <div class="customers__wrapper">
             <ul>
               <li>
-                <img src="./images/icon-client/rgd.svg" alt="Логотип Российских Железных Дорог" />
+                <div class="item-img">
+                  <img src="./images/customers/01.svg" alt="Логотип Российских Железных Дорог" />
+                </div>
                 <div class="text">Российские железные дороги</div>
               </li>
               <li>
-                <img src="./images/icon-client/mo.svg" alt="Логотип Министерства Обороны Российской Федерации" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/02.svg" alt="Логотип Министерства Обороны Российской Федерации" />
+                </div>
+                <div class="text">Министерство обороны Российской Федерации</div>
               </li>
               <li>
-                <img src="./images/icon-client/mchs.svg" alt="Логотип Министерства Черезвычайных Ситуаций" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/03.svg" alt="Логотип Министерства Черезвычайных Ситуаций" />
+                </div>
+                <div class="text">МЧС России</div>
               </li>
               <li>
-                <img src="./images/icon-client/gazProm.svg" alt="Логотип Газпрома" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/04.svg" alt="Логотип Газпрома" />
+                </div>
+                <div class="text">Газпром</div>
               </li>
               <li>
-                <img src="./images/icon-client/transNeft.svg" alt="Логотип Транснефти" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/05.svg" alt="Логотип Транснефти" />
+                </div>
+                <div class="text">Ртранснефть</div>
               </li>
               <li>
-                <img src="./images/icon-client/rosGvard.svg" alt="Логотип ФГУП Охрана РосГвардии" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/06.svg" alt="Логотип ФГУП Охрана РосГвардии" />
+                </div>
+                <div class="text">РФГУП "Охрана" Росгвардии</div>
               </li>
               <li>
-                <img src="./images/icon-client/minEnergo.svg"
+                <div class="item-img">
+                <img src="./images/customers/07.svg"
                   alt="Логотип Министерства Энергетики Российской Федерации" />
-                <div class="text">Российские железные дороги</div>
+                </div>
+                <div class="text">Министерство энергетики РФ</div>
               </li>
               <li>
-                <img src="./images/icon-client/emailRus.svg" alt="Логотип Почты России" />
-                <div class="text">Российские железные дороги</div>
+                <div class="item-img">
+                <img src="./images/customers/08.svg" alt="Логотип Почты России" />
+                </div>
+                <div class="text">Почта россии</div>
               </li>
             </ul>
           </div>
@@ -713,7 +783,6 @@
     </section>
 
     <section class="licenses">
-
       <div class="container">
         <div class="licenses__container">
           <h2 class="title title__left">Лицензии и&nbsp;разрешения</h2>
@@ -744,17 +813,17 @@
             <form action="/" method="POST">
               <label for="username">Получить <span>консультацию</span></label>
               <input type="text" placeholder="Ваше имя" name="username" id="username" autocomplete required />
-              <input type="tel" placeholder="Ваш телефон" autocomplete required />
-              <div class="wrapper__link"> <span class="span-warning">Нажимая на кнопку «Отправить», вы даете согласие на
+              <input type="text" placeholder="Ваш телефон" autocomplete required class="phone" />
+              <div class="wrapper__link"> <span class="span-warning">Нажимая на кнопку <i class="blue-accent">«Отправить»</i>, вы даете согласие на
                   обработку
-                  своих персональных данных</span>
-                <a class="btn">
+                  своих <i class="underline">персональных данных</i></span>
+                <a class="btn btn__white">
                   отправить
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.70998 11.7141L11.71 6.71409C11.801 6.61899 11.8724 6.50684 11.92 6.38409C12.02 6.14063 12.02 5.86755 11.92 5.62409C11.8724 5.50134 11.801 5.3892 11.71 5.29409L6.70998 0.294091C6.61674 0.200853 6.50605 0.126892 6.38423 0.076432C6.26241 0.0259717 6.13184 -2.56287e-07 5.99998 -2.6205e-07C5.73368 -2.73691e-07 5.47828 0.105788 5.28998 0.294091C5.10168 0.482395 4.99589 0.73779 4.99589 1.00409C4.99589 1.27039 5.10168 1.52579 5.28998 1.71409L8.58998 5.00409L0.999982 5.00409C0.734765 5.00409 0.48041 5.10945 0.292874 5.29698C0.105338 5.48452 -1.83707e-05 5.73887 -1.83823e-05 6.00409C-1.83939e-05 6.26931 0.105338 6.52366 0.292874 6.7112C0.48041 6.89873 0.734765 7.00409 0.999982 7.00409L8.58998 7.00409L5.28998 10.2941C5.19625 10.3871 5.12186 10.4977 5.07109 10.6195C5.02032 10.7414 4.99418 10.8721 4.99418 11.0041C4.99418 11.1361 5.02032 11.2668 5.07109 11.3887C5.12186 11.5105 5.19625 11.6211 5.28998 11.7141C5.38294 11.8078 5.49355 11.8822 5.6154 11.933C5.73726 11.9838 5.86797 12.0099 5.99998 12.0099C6.13199 12.0099 6.2627 11.9838 6.38456 11.933C6.50642 11.8822 6.61702 11.8078 6.70998 11.7141Z"
-                      fill="currentColor" />
-                  </svg>
+<!--                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                    <path-->
+<!--                      d="M6.70998 11.7141L11.71 6.71409C11.801 6.61899 11.8724 6.50684 11.92 6.38409C12.02 6.14063 12.02 5.86755 11.92 5.62409C11.8724 5.50134 11.801 5.3892 11.71 5.29409L6.70998 0.294091C6.61674 0.200853 6.50605 0.126892 6.38423 0.076432C6.26241 0.0259717 6.13184 -2.56287e-07 5.99998 -2.6205e-07C5.73368 -2.73691e-07 5.47828 0.105788 5.28998 0.294091C5.10168 0.482395 4.99589 0.73779 4.99589 1.00409C4.99589 1.27039 5.10168 1.52579 5.28998 1.71409L8.58998 5.00409L0.999982 5.00409C0.734765 5.00409 0.48041 5.10945 0.292874 5.29698C0.105338 5.48452 -1.83707e-05 5.73887 -1.83823e-05 6.00409C-1.83939e-05 6.26931 0.105338 6.52366 0.292874 6.7112C0.48041 6.89873 0.734765 7.00409 0.999982 7.00409L8.58998 7.00409L5.28998 10.2941C5.19625 10.3871 5.12186 10.4977 5.07109 10.6195C5.02032 10.7414 4.99418 10.8721 4.99418 11.0041C4.99418 11.1361 5.02032 11.2668 5.07109 11.3887C5.12186 11.5105 5.19625 11.6211 5.28998 11.7141C5.38294 11.8078 5.49355 11.8822 5.6154 11.933C5.73726 11.9838 5.86797 12.0099 5.99998 12.0099C6.13199 12.0099 6.2627 11.9838 6.38456 11.933C6.50642 11.8822 6.61702 11.8078 6.70998 11.7141Z"-->
+<!--                      fill="currentColor" />-->
+<!--                  </svg>-->
                 </a>
               </div>
             </form>
@@ -767,8 +836,8 @@
     <section class="sidebar">
       <div class="sidebar__wrapper">
         <ul class="sidebar__list">
-          <li class="sidebar__item"><a class="btn" href="#"><svg width="38" height="26" viewBox="0 0 38 26" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+          <li class="sidebar__item"><a class="btn" href="#" data-fancybox="" data-src="#dialog-content"><svg width="38"
+                height="26" viewBox="0 0 38 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M38 17.9993L30.3871 17.1182L26.7468 20.7585C22.6459 18.6728 19.3127 15.3396 17.2271 11.2388L20.8818 7.58399L20.0007 0H12.0411C11.2032
                       14.7057 23.2943 26.7968 38 25.9589V17.9993Z" fill="currentColor" />
                 <path d="M7 2H1M7 10H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -866,18 +935,18 @@
             <ul class="footer__email-list">
               <li>
                 <a href="tel:+73512779850">
-                  <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="phone-icon" width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21 9.69195L16.9008 9.21747L14.9406 11.1776C12.7324 10.0546 10.9376 8.25979
                             9.81458 6.05164L11.7825 4.08369L11.308 0H7.02212C6.57097 7.91847 13.0815 14.429 21
-                            13.9779V9.69195Z" fill="#56A2E9" />
-                    <path d="M4 1H1M4 5H2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            13.9779V9.69195Z" fill="currentColor" />
+                    <path d="M4 1H1M4 5H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
-                  <span class="grey">8 (351)</span> 277-98-50</a>
+                  <span class="grey">8 (351)&nbsp;</span>277-98-50</a>
               </li>
-              <li><a class="blue" href="#">заказать звонок</a></li>
+              <li><a class="blue" href="#" data-fancybox="" data-src="#dialog-content">заказать звонок</a></li>
               <li>
-                <a href="mailto:nou_rosto@mail.ru">
+                <a class="icon-email-footer" href="mailto:nou_rosto@mail.ru">
                   <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1H4M1 5H3M7.02 2.801L6.42 8.801C6.3922 9.07903 6.42296 9.35981 6.51031 9.62522C6.59766
                             9.89064 6.73966 10.1348 6.92715 10.342C7.11464 10.5492 7.34346 10.7148 7.59886 10.8281C7.85426
@@ -886,19 +955,19 @@
                             2.10936 18.6603 1.86519 18.4729 1.65801C18.2854 1.45083 18.0565 1.28524 17.8011 1.17191C17.5457
                             1.05857 17.2694 1.00001 16.99 1H9.01C8.51403 1.00002 8.03576 1.18432 7.66803 1.51712C7.3003
                             1.84993 7.06935 2.30749 7.02
-                            2.801Z" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            2.801Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                     <path d="M7.80005 1.5L10.782 4.78C11.047 5.07155 11.3669 5.30804 11.7233 5.47598C12.0797 5.64392
                             12.4657 5.74001 12.8592 5.75877C13.2528 5.77753 13.6461 5.71858 14.0169 5.5853C14.3876 5.45203
                             14.7285 5.24702 15.02
-                            4.982L18.3 2" stroke="#56A2E9" stroke-width="1.5" stroke-linecap="round"
+                            4.982L18.3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                   <span class="span-email">nou_rosto<i>@</i>mail.ru</span>
                 </a>
               </li>
               <li>
-                <a class="btn btn__social_footer" href="htths://vk.com">
+                <a class="btn btn__social_footer desctop" href="htths://vk.com">
                   <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24581 0.979455C8.57841 1.13714 9.35439
                             1.05509 9.63311 2.0165C9.88423 2.88255 9.87392 4.95368 9.67984 5.91772C9.14318 8.58359 6.8778
@@ -927,7 +996,33 @@
           </div>
         </div>
         <div class="footer__map">
-          <img src="./images/map-card.png" alt="" srcset="" />
+          <img src="./images/consultation/mapfooter.svg" alt="" srcset="" />
+        </div>
+        <div class="footer__social-mob">
+          <a class="btn btn__social_footer mob" href="htths://vk.com">
+            <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.24581 0.979455C8.57841 1.13714 9.35439
+                            1.05509 9.63311 2.0165C9.88423 2.88255 9.87392 4.95368 9.67984 5.91772C9.14318 8.58359 6.8778
+                            4.36717 6.31852 3.44094C6.02899 2.96131 5.52526 1.86737 5.30141 1.33363C4.91526 0.412672
+                            3.98945 0.608835 2.88602 0.608835C2.47093 0.608835 2.19071 0.646817 1.79907 0.645995C1.18624
+                            0.644515 0 0.527278 0 1.09061C0 1.52157 0.24696 1.95221 0.437211 2.32596L1.4623 4.35122C1.64141
+                            4.69158 1.80572 5.03277 2.00811 5.36804L2.56506 6.33669C4.03185 8.73158 5.79417 11.5407
+                            8.43323 12.8382C10.4335 13.8216 11.375 13.8017 13.5682 13.8017C13.9096 13.8017 14.3385
+                            13.6179 14.4571 13.3836C14.6017 13.0978 14.5869 12.6249 14.6185 12.2461C14.6959 11.3233
+                            15.1492 10.1054 16.2452 10.8583C16.7644 11.2151 17.3953 12.0461 17.8691 12.5139C18.1259
+                            12.7673 18.4365 13.0991 18.7249 13.2984C18.8726 13.4005 19.117 13.5478 19.2697 13.6121C20.1759
+                            13.9936 21.2166 13.8014 22.3388 13.8017C22.9616 13.8019 24.0473 13.9035 24.5723 13.5641C25.4046
+                            13.0259 24.5723 12.0642 24.1005 11.467C23.8309 11.126 22.791 10.0368 22.4228 9.71617C20.0126
+                            7.61774 20.4949 7.95795 22.9921 4.66412C23.5159 3.97303 24.925 2.16219 24.925 1.20176C24.925
+                            0.698283 24.3854 0.655203 23.9814 0.612781C23.7737 0.591076 23.716 0.64468 23.5023 0.647311C22.8384
+                            0.655532 19.8152 0.575456 19.437 0.704367C19.1927 0.787732 19.0539 1.03618 18.9546 1.26507C18.3928
+                            2.55846 18.0098 3.44916 17.2042 4.64867C16.8781 5.13422 15.8336 6.76058 15.1798 6.76058C14.7115
+                            6.76058 14.5427 5.8383 14.5427 5.38941C14.5427 4.02795 14.6177 2.78586 14.6177 1.46123C14.6177
+                            1.17924 14.556 0.883594 14.4622 0.688418C14.0526 -0.164306 11.822 0.0159071 10.7946 0.0159071C10.0525
+                            0.0159071 8.85614 0.0918728 8.39415 0.681347C8.32231 0.773263 8.25911 0.822427 8.24581
+                            0.979455Z" fill="currentColor" />
+            </svg>
+          </a>
         </div>
         <div class="footer__copyright">
           <p class="copy-text">&copy; Челябинская автошкола ДОСААФ
@@ -966,21 +1061,37 @@
       </svg>
     </button>
   </div>
-  <div class="modal modal__orderCall modal_opened">
+  <div class="modal modal__orderCall modal_opened" id="dialog-content" style="display: none">
     <div class="modal__container">
-      <form action="" class="modal__form">
-        <label for="userName" class="modal__title">Заказ звонка</label>
-        <input id="userName" type="text" placeholder="Ваше имя" required>
-        <input type="tel" placeholder="Ваш Телефон" required>
-        <textarea type="text-area" placeholder="Наши администраторы ответят 
-        на любой интересующий Вас вопрос по услуге" required> </textarea>
-        <button type="submit" class="modal__btn-sub btn">отправить</button>
-        <button type="button" class="modal__btn-slose btn"></button>
-        <span>Нажимая на кнопку <em>«Отправить»</em>, вы даете согласие <a href="#">на обработку
-            своихперсональных данных</a></span>
-      </form>
+      <div class="modal__form">
+        <form action="">
+          <label for="usernameModal" class="modal__title">Заказ звонка</label>
+          <input id="usernameModal" type="text" placeholder="Ваше имя" required>
+          <input type="text" placeholder="Ваш Телефон" required class="phone">
+          <textarea name="text" placeholder="Наши администраторы ответят на любой интересующий Вас вопрос по услуге"
+            required></textarea>
+          <div class="sub__cont">
+            <button type="submit" class="modal__btn-sub btn">отправить</button>
+            <span>Нажимая на кнопку <em>«Отправить»</em>, вы даете согласие <a href="#">на обработку
+                своихперсональных данных</a></span>
+          </div>
+          <!--        <button type="button" class="modal__btn-close btn"></button>-->
+        </form>
+      </div>
     </div>
   </div>
+
+  <script src="script/jquery-3.7.1.min.js"></script>
+  <script src="script/fancybox/fancybox.umd.js" defer></script>
+  <script src="script/burger.js" defer></script>
+  <script src="script/swiper-bundle.js" defer></script>
+  <script src="script/hero-slider.js" defer></script>
+  <script src="script/services-slider.js" defer></script>
+  <script src="script/open-submenu.js" defer></script>
+  <script src="script/button-go-up.js" defer></script>
+  <script src="script/jquery.inputmask.min.js" defer></script>
+  <script src="script/index.js" defer></script>
+
 </body>
 
 </html>

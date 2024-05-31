@@ -1,16 +1,25 @@
 .footer {
   background: url('../images/bg-footer.png') no-repeat center/cover;
-  padding: 0px 0 10px;
+  padding: 0 0 6px;
   position: relative;
 
   @media #{$tablet-mini} {
     padding: 0 0 10px;
   }
 
+  @media #{$phone} {
+    padding: 28px 0 10px;
+  }
+
   &__container {
+    position: relative;
+    z-index: 20;
+    //backdrop-filter: blur(20px);
+    //background: rgba(20, 21, 23, 0.1);
+    //border-radius: 20px;
     display: grid;
-    grid-template-columns: 3fr 493px 205px;
-    grid-template-rows: 57px 1fr;
+    grid-template-columns: minmax(460px, 730px) minmax(220px, 493px) minmax(205px, 280px);
+    grid-template-rows: 50px 196px 20px;
     grid-template-areas:
       'nav map cont'
       'logo map cont'
@@ -24,37 +33,24 @@
     }
 
     @media #{$notebook_s} {
-      grid-template-columns: 2fr 350px 1fr;
+      grid-template-columns: 2fr minmax(310px, 320px) 1fr;
     }
+
+    //@media #{$laptop_s} {
+    //  grid-template-columns: 1fr 1fr;
+    //  grid-template-rows: 150px 1fr;
+    //  grid-template-areas:
+    //    'logo cont'
+    //    'map map'
+    //    'f-copy dev';
+    //}
+
 
     @media #{$laptop_s} {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 150px 1fr;
-      grid-template-areas:
-        'logo cont'
-        'map map'
-        'f-copy dev';
-    }
-
-    @media #{$tablet-mini} {
-      grid-template-columns: 1fr 120px;
-      //grid-template-rows: 60px 170px 220px 50px 50px; должно быть так
-      //временный вариант:
-      grid-template-rows: 100px 175px 220px 50px 50px;
-      //grid-template-rows: repeat(5, 1fr);
-      justify-items: center;
-      grid-template-areas:
-        'cont cont'
-        'logo logo'
-        'map map'
-        'soci soci'
-        'f-copy dev';
-    }
-
-    @media #{$phone} {
+      padding-left: 0;
       justify-items: flex-start;
       grid-template-columns: minmax(190px, 460px) 120px;
-      grid-template-rows: 100px 175px 220px 50px;
+      grid-template-rows: 80px 156px 260px 50px 67px;
       grid-template-areas:
         'cont .'
         'logo .'
@@ -62,20 +58,52 @@
         'soci soci'
         'f-copy dev';
     }
+
+    @media #{$tablet-mini} {
+      padding-left: 0;
+      justify-items: flex-start;
+      grid-template-columns: minmax(190px, 460px) 120px;
+      grid-template-rows: 70px 156px 260px 50px;
+      grid-template-areas:
+        'cont .'
+        'logo .'
+        'map map'
+        'soci soci'
+        'f-copy dev';
+    }
+
+    @media #{$phone} {
+      grid-template-rows: 70px 156px 260px 50px;
+    }
+  }
+
+  &__container::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    backdrop-filter: blur(20px);
+    background: rgba(20, 21, 23, 0.1);
+    border-radius: 20px;
+
+    @media #{$phone} {
+      top: -16px;
+    }
   }
 
   &__nav {
-    //display: grid;
     grid-area: nav;
     position: relative;
-    //align-self: center;
     padding: 15px 35px 10px 35px;
     max-width: 730px;
     border-radius: 0 0 80px 80px;
-    //backdrop-filter: blur(30px);
     box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.3);
     background: rgba(19, 19, 19, 0.3);
     margin-right: -70px;
+
     @media #{$laptop} {
       margin-right: -20px;
     }
@@ -94,7 +122,6 @@
         list-style-type: none;
         width: 100%;
         justify-content: space-between;
-        //column-gap: 95px;
 
         .footer__nav-item {
           font-weight: 700;
@@ -112,21 +139,7 @@
             }
           }
 
-          .footer__nav-link:after {
-            position: absolute;
-            content: '';
-            left: -20%;
-            bottom: 0;
-            display: block;
-            width: 0;
-            transition: 0.3s;
-            height: 1px;
-            color: #fff;
-            background-color: #34c3ff;
-          }
-
-          .footer__nav-link:hover:after {
-            width: 140%;
+          .footer__nav-link:hover {
             color: #34c3ff;
           }
 
@@ -149,25 +162,26 @@
   }
 
   &__wrapper-company {
-    // grid-area: logo;
-    // padding-top: 19px;
-    // position: relative;
     display: grid;
     grid-area: logo;
-    padding-top: 19px;
+    padding-top: 26px;
     position: relative;
-    grid-auto-columns: 130px 350px;
+    grid-auto-columns: 130px minmax(350px, 400px);
+    //grid-template-rows: 50px 90px; // возможно для мобилы
     grid-template-rows: 50px 80px;
     grid-template-areas:
       'logo title-footer'
       'logo title-footer';
 
     @media #{$tablet-mini} {
-      justify-content: center;
+      justify-content: flex-start;
+      padding-top: 0;
+      grid-template-rows: 80px 67px;
+      margin-bottom: 11px;
+      //////
       align-items: center;
       width: 100%;
       grid-template-columns: minmax(320px, 750px);
-      grid-template-rows: 80px 70px;
       row-gap: 18px;
       grid-template-areas:
         'title-footer'
@@ -175,8 +189,16 @@
     }
 
     @media #{$phone} {
-      justify-content: flex-start;
+      padding-top: 0;
+      grid-template-rows: 95px 67px;
+      margin-bottom: 11px;
+      grid-template-columns: minmax(345px, 750px);
+      row-gap: 5px;
+      grid-template-areas:
+        'title-footer'
+        'logo';
     }
+
 
     a {
       font-weight: 700;
@@ -186,14 +208,12 @@
       grid-area: logo;
 
       @media #{$tablet-mini} {
+        justify-content: flex-start;
+        align-items: center;
+        ////////
         line-height: 50%;
         display: inline-flex;
         column-gap: 10px;
-        justify-content: center;
-      }
-
-      @media #{$phone} {
-        justify-content: flex-start;
       }
 
       img {
@@ -201,13 +221,16 @@
           display: inline-block;
           width: 67px;
           height: 67px;
+          margin-left: 5px;
+          margin-top: 10px;
         }
       }
 
       .footer__logo_title {
         position: absolute;
-        top: 20px;
-        left: 130px;
+        //top: 28px; // так же возможно для мобилки
+        top: 22px;
+        left: 140px;
         max-width: 322px;
 
         @media #{$tablet-mini} {
@@ -218,24 +241,42 @@
           max-width: 400px;
         }
 
+        @media #{$phone} {
+          top: 5px;
+          left: 3px;
+        }
+
         span {
           display: inline-flex;
           font-size: clamp(14px, 1.04vw, 20px);
           line-height: 133%;
+
+          @media #{$phone} {
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
         }
 
         .logo-active {
           font-size: 30px;
           color: #fc0;
+          margin-top: -9px;
 
           @media #{$tablet-mini} {
             font-size: 25px;
+          }
+
+          @media #{$phone} {
+            margin-top: -4px;
+            font-size: 30px;
+            line-height: 0.5;
           }
         }
       }
     }
 
     .footer__address {
+      padding-left: 10px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -243,14 +284,35 @@
       grid-area: title-footer;
 
       @media #{$tablet-mini} {
+        align-items: flex-start;
+        padding-left: 6px;
         max-width: 700px;
         width: 100%;
         justify-content: center;
-        align-items: center;
       }
 
       @media #{$phone} {
-        align-items: flex-start;
+        padding-left: 8px;
+      }
+
+      address {
+
+        @media #{$laptop_s} {
+          padding-left: 0;
+        }
+
+        @media #{$phone} {
+          margin-bottom: 10px;
+        }
+
+      }
+
+      address:last-of-type {
+
+        @media #{$phone} {
+          margin-bottom: 0;
+        }
+
       }
 
       span {
@@ -261,6 +323,7 @@
         font-size: 14px;
         color: #828d9c;
         font-style: normal;
+        line-height: 1;
       }
 
       svg {
@@ -269,10 +332,12 @@
       }
 
       p {
+        font-family: $font-family-base, sans-serif;
         display: inline-block;
         font-weight: 700;
         font-size: 20px;
         font-style: normal;
+        line-height: 1;
         color: #fff;
 
         @media #{$notebook_s} {
@@ -280,7 +345,7 @@
         }
 
         .grey {
-          font-family: $font-family-base;
+          font-family: $font-family-base, sans-serif;
           display: inline-block;
           font-weight: 700;
           font-size: 20px;
@@ -296,14 +361,21 @@
   }
 
   &__wrapper-contact {
-    //position: relative;
     z-index: 40;
     grid-area: cont;
     display: flex;
     justify-content: flex-end;
 
     .footer__email {
-      padding-top: 18px;
+      padding-top: 13px;
+
+      @media #{$laptop_s} {
+        padding-top: 26px;
+      }
+
+      @media #{$phone} {
+        padding-top: 0;
+      }
 
       .footer__email-list {
         list-style-type: none;
@@ -319,11 +391,14 @@
         @media #{$tablet-mini} {
           display: flex;
           justify-self: flex-start;
+          align-items: flex-start;
         }
 
         li {
+          margin-left: 2px;
+          display: flex;
           padding: 0;
-          font-family: $font-family-base;
+          font-family: $font-family-base, sans-serif;
           font-weight: 700;
           font-size: 30px;
 
@@ -332,16 +407,27 @@
           }
 
           a {
+            display: flex;
+            align-items: center;
             color: #fff;
+            margin-bottom: 3px;
+
+            @media #{$phone} {
+              margin-bottom: 14px;
+            }
+            //margin-bottom: 10px; // возможно для мобилы, проверить
+
             transition: 0.3s ease-in;
 
             .grey {
+              margin-left: 14px;
               color: #b1b1b1;
               transition: 0.3s ease-in;
             }
 
             .span-email {
-              font-family: $font-family-title;
+              margin-left: 14px;
+              font-family: $font-family-title, sans-serif;
               font-weight: 500;
               font-size: 16px;
               color: #b9bfc9;
@@ -351,15 +437,24 @@
                 font-style: normal;
               }
             }
+
+            .phone-icon {
+              vertical-align: middle;
+              color: #56a2e9;
+            }
           }
 
           a:hover {
-            color: #34c3ff;
-            transition: 0.3s ease-in;
 
             .grey {
-              color: #fff;
+              margin-left: 14px;
+              color: #b1b1b1;
               transition: 0.3s ease-in;
+            }
+
+            .phone-icon {
+              vertical-align: middle;
+              color: #34c3ff;
             }
           }
 
@@ -369,6 +464,8 @@
             font-size: 18px;
             color: #56a2e9;
             transition: 0.3s ease-in;
+            /// проверить на других макетах
+            margin-top: -3px;
 
             @media #{$tablet-mini} {
               display: none;
@@ -376,15 +473,25 @@
           }
 
           .blue:hover {
-            color: #fff;
+            color: #34C3FF;
             transition: 0.3s ease-in;
           }
         }
 
-        a:hover {
+        .icon-email-footer {
+          svg {
+            color: #56a2e9;
+          }
+        }
+
+        .icon-email-footer:hover {
           span {
             color: #34c3ff;
             transition: 0.3s ease-in;
+          }
+
+          svg {
+            color: #34c3ff;
           }
         }
 
@@ -402,21 +509,34 @@
           transition: 0.3s ease-in;
 
           @media #{$tablet-mini} {
+            max-width: 490px;
+            bottom: 85px;
+            width: 90%;
+            left: 10px;
             position: absolute;
-            max-width: 408px;
-            width: 100%;
-            bottom: 14%;
-            left: 50%;
-            transform: translateX(-50%);
           }
 
           @media #{$phone} {
-            max-width: 357px;
-            bottom: 15%;
+            grid-area: soci;
+            display: inline-flex;
+              //max-width: 347px;
+              width: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              //bottom: 85px;
+            padding: 0 22px 0 22px;
           }
 
           svg {
             color: #7d889a;
+          }
+        }
+
+        .desctop {
+          display: block;
+
+          @media #{$laptop_s} {
+            display: none;
           }
         }
 
@@ -433,6 +553,11 @@
 
         li:nth-of-type(3) {
           margin-bottom: 12px;
+
+          @media #{$tablet-mini} {
+
+            margin-bottom: 19px;
+          }
         }
       }
     }
@@ -441,14 +566,35 @@
   &__map {
     position: relative;
     grid-area: map;
-    //background: #c0e40d;
     padding-top: 18px;
     margin-bottom: 20px;
 
+    @media #{$tablet-mini} {
+      width: 90%;
+      padding-top: 0;
+      margin-bottom: 14px;
+      margin-top: 20px;
+      border-radius: 30px;
+    }
+
+    @media #{$phone} {
+      width: 100%;
+      padding-top: 8px;
+    }
+
     img {
+      border-radius: 44px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
       @media #{$notebook_s} {
         width: 100%;
         height: 100%;
+      }
+
+      @media #{$tablet-mini} {
+        border-radius: 30px;
       }
     }
   }
@@ -465,22 +611,50 @@
       padding-left: 0;
     }
 
-    @media #{$phone} {
+    @media #{$tablet} {
+      align-items: center;
+    }
+
+    @media #{$tablet-mini} {
       font-family: $font-family-base, sans-serif;
       max-width: 300px;
+      align-items: center;
+    }
+
+    @media #{$phone} {
+      align-items: center;
     }
 
     .copy-text {
+      font-family: $font-family-base, sans-serif;
       font-weight: 400;
       font-size: 16px;
       color: #40464e;
       text-transform: uppercase;
+
+      @media #{$tablet-mini} {
+        line-height: 1;
+      }
+
+      @media #{$phone} {
+        font-size: 14px;
+        line-height: 1;
+      }
 
       .copy {
         font-weight: 400;
         font-size: 16px;
         color: #40464e;
         text-transform: capitalize;
+
+        @media #{$tablet-mini} {
+          line-height: 1;
+        }
+
+        @media #{$phone} {
+          font-size: 14px;
+          line-height: 1;
+        }
       }
       .copy:hover {
         color: #34c3ff;
@@ -494,19 +668,61 @@
     grid-area: dev;
     position: relative;
     justify-items: end;
-    margin-top: -52px;
+    margin-top: -51px;
     z-index: 40;
 
     @media #{$notebook_s} {
-      margin-top: -22px;
+      margin-top: -50px;
     }
 
     @media #{$laptop_s} {
+      margin-top: -8px;
+    }
+
+    @media #{$tablet-mini} {
+      margin-left: 14px;
       margin-top: 0;
     }
 
     @media #{$phone} {
-      margin-left: 14px;
+      margin-top: -9px;
+    }
+  }
+  .footer__social-mob {
+    display: none;
+    grid-area: soci;
+
+    @media #{$laptop_s} {
+      display: flex;
+      align-items: center;
+      max-width: 497px;
+      width: 100%;
+    }
+
+    .mob {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(30px);
+      box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.3);
+      background: rgba(19, 19, 19, 0.3);
+      border-radius: 26px;
+
+      svg {
+        color: #7d889a;
+      }
+    }
+
+    .mob:hover {
+      box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.8);
+      background: rgba(19, 19, 19, 0.8);
+      transition: 0.3s ease-in;
+
+      svg {
+        color: #34c3ff;
+        transition: 0.3s ease-in;
+      }
     }
   }
 }
@@ -520,3 +736,4 @@
   bottom: 0;
   background: rgba(30, 38, 45, 0.9);
 }
+

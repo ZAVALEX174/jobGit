@@ -1,41 +1,38 @@
-const servisesSlider = new Swiper('.swiper-servises', {
-        loop: true,
+$(document).ready(function () {
+    if ($(window).width() >= 500) {
+const servisesSlider = new Swiper ('.swiper-servises', {
+    loop: true,
     slidesPerView: 4,
     spaceBetween: 23,
-    // Responsive breakpoints
+    speed: 800,
     breakpoints: {
-        // when window width is >= 480px
-        300: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+        300:{
+            slidesPerView: 4,
         },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-        },
-        // when window width is >= 768px
-        768: {
+        500: {
             slidesPerView: 2,
             spaceBetween: 23,
-         },
+        },
+        767: {
+            slidesPerView: 2,
+            spaceBetween: 23,
+        },
         // when window width is >= 1024px
-        1300: {
+        1280: {
             slidesPerView: 3,
             spaceBetween: 23,
         },
         // when window width is >= 1680px
-        1680: {
+        1685: {
             slidesPerView: 4,
             spaceBetween: 23,
         },
     },
-
     navigation: {
-            nextEl: '.servises-btn-next',
-            prevEl: '.servises-btn-prev',
-        },
+        nextEl: '.servises-btn-next',
+        prevEl: '.servises-btn-prev',
+    },
+})
     }
+})
 
-
-);

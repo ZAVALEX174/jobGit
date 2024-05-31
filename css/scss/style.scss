@@ -6,10 +6,24 @@
 
 @import 'components/header';
 @import 'components/burger-menu';
+
 @import 'components/hero';
+
 @import 'components/servises';
+@import 'components/services-page';
+
+@import 'components/service-page';
+
+@import 'components/stickybox';
+
 @import 'components/about';
+@import 'components/about-page';
+
+@import 'components/contacts-page';
+
 @import 'components/customers';
+@import 'components/customers-page';
+
 @import 'components/licenses';
 @import 'components/consultation';
 @import 'components/footer';
@@ -17,6 +31,10 @@
 @import 'components/button-go-up';
 @import 'components/sidebar';
 @import 'components/modal';
+@import 'components/main';
+
+
+@import 'components/breadcrumb';
 
 /*
 @import "components/logo";

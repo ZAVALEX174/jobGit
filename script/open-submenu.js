@@ -6,21 +6,12 @@ const visHidden = document.querySelector('.visually-hidden')
 console.log(visHidden)
 
 submenuBtn.addEventListener('mouseover', () => {
-    backDropMenu.classList.remove('visually-hidden');
-    // backDropMenu.style.display = 'flex';
-    // backDropMenu.style.bottom = '-270px';
-    // headerContainer.classList.remove('header__container');
-    headerContainer.classList.add('header__container_rectangle');
-    // headerContainer.style.borderRadius = '20px 20px 0 0';
-    // headerContainer.style.borderRadius = '0';
+    // backDropMenu.classList.remove('visually-hidden');
+    headerContainer.classList.add('header__container_dropdown');
 })
 
 headerMenu.addEventListener('mouseleave', () => {
-    backDropMenu.classList.add('visually-hidden');
-    // backDropMenu.style.display = 'none';
-    headerContainer.classList.remove('header__container_rectangle');
-    // headerContainer.classList.add('header__container');
-    // headerContainer.style.borderRadius = '20px';
-    // backDropMenu.style.bottom = '0';
-
+    // backDropMenu.classList.add('visually-hidden');
+    headerContainer.classList.remove('header__container_dropdown');
+    headerContainer.classList.add('header__container');
 })

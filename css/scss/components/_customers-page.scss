@@ -1,0 +1,53 @@
+.customers-page {
+
+  .sticky-box {
+    top: 190px;
+    height: 85%;
+  }
+
+  .customers-page__title {
+    margin-top: 40px;
+    margin-bottom: 52px;
+
+    @media #{$phone} {
+      justify-content: center;
+      margin-top: 36px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .customers {
+    padding: 23px 0 110px;
+
+    .customers__container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .customers__wrapper {
+
+        ul {
+
+          li {
+
+            .item-img {
+              height: 128px;
+            }
+          }
+
+          li:nth-child(n+5) {
+            padding-top: 20px;
+          }
+        }
+      }
+
+      .customers__btn {
+        display: none;
+      }
+    }
+  }
+
+  .consultation {
+    padding: 142px 0 43px;
+  }
+}
