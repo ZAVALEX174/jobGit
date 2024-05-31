@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8df8b777-6204-4798-b781-b48c41ed956c" name="dosaaf-ohrana.luxardev.ru">
+        <fileTransfer rootFolder="/home/zuev/web/dosaaf-ohrana.luxardev.ru/public_html" accessType="SFTP" host="dosaaf-ohrana.luxardev.ru" port="22" sshConfigId="fcb423dc-0106-46ed-8387-ca61a5cde1a3" sshConfig="zuev@dosaaf-ohrana.luxardev.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

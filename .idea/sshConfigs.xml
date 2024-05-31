@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="dosaaf-ohrana.luxardev.ru" id="fcb423dc-0106-46ed-8387-ca61a5cde1a3" port="22" nameFormat="DESCRIPTIVE" username="zuev" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
