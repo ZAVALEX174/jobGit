@@ -3063,22 +3063,58 @@ a {
 .customers-page .customers {
   padding: 23px 0 110px;
 }
+@media screen and (max-width: 767px) {
+  .customers-page .customers {
+    padding: 23px 0 10px;
+  }
+}
 .customers-page .customers .customers__container {
   display: flex;
   flex-direction: column;
   padding: 0;
 }
+@media screen and (max-width: 767px) {
+  .customers-page .customers .customers__container .customers__wrapper {
+    padding-bottom: 90px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .customers-page .customers .customers__container .customers__wrapper ul li {
+    min-height: 110px;
+  }
+}
 .customers-page .customers .customers__container .customers__wrapper ul li .item-img {
   height: 128px;
+}
+@media screen and (max-width: 500px) {
+  .customers-page .customers .customers__container .customers__wrapper ul li .item-img {
+    height: 80px;
+  }
 }
 .customers-page .customers .customers__container .customers__wrapper ul li:nth-child(n+5) {
   padding-top: 20px;
 }
+@media screen and (max-width: 500px) {
+  .customers-page .customers .customers__container .customers__wrapper ul li:nth-child(n+5) {
+    padding-top: 0px;
+  }
+}
 .customers-page .customers .customers__container .customers__btn {
   display: none;
 }
+@media screen and (max-width: 999px) {
+  .customers-page .customers .customers__container .customers__btn {
+    display: block;
+  }
+}
 .customers-page .consultation {
   padding: 142px 0 43px;
+}
+@media screen and (max-width: 767px) {
+  .customers-page .consultation {
+    padding: 90px 0 98px;
+  }
 }
 
 .licenses {
@@ -3860,6 +3896,7 @@ a {
   font-family: "Bebas Neue", sans-serif, sans-serif;
   font-weight: 700;
   font-size: 30px;
+  line-height: 1;
 }
 @media screen and (max-width: 1280px) {
   .footer__wrapper-contact .footer__email .footer__email-list li {

@@ -401,6 +401,7 @@
           font-family: $font-family-base, sans-serif;
           font-weight: 700;
           font-size: 30px;
+          line-height: 1;
 
           @media #{$notebook_s} {
             font-size: 25px;

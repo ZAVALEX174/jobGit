@@ -19,6 +19,10 @@
   .customers {
     padding: 23px 0 110px;
 
+    @media #{$tablet-mini} {
+      padding: 23px 0 10px;
+    }
+
     .customers__container {
       display: flex;
       flex-direction: column;
@@ -26,28 +30,53 @@
 
       .customers__wrapper {
 
+        @media #{$tablet-mini} {
+          padding-bottom: 90px;
+          margin-bottom: 0;
+        }
+
         ul {
 
           li {
 
+            @media #{$phone} {
+              min-height: 110px;
+            }
+
             .item-img {
               height: 128px;
+
+              @media #{$phone} {
+                height: 80px;
+              }
             }
           }
 
           li:nth-child(n+5) {
             padding-top: 20px;
+
+            @media #{$phone} {
+              padding-top: 0px;
+            }
           }
         }
       }
 
       .customers__btn {
         display: none;
+
+        @media #{$tablet} {
+          display: block;
+        }
       }
     }
   }
 
   .consultation {
     padding: 142px 0 43px;
+
+    @media #{$tablet-mini} {
+      padding: 90px 0 98px;
+    }
   }
 }
